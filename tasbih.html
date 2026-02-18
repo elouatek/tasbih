@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسبيح - صدقة جارية</title>
+    <meta name="description" content="عداد تسبيح رقمي - صدقة جارية على روح جدتي عثماني رشيدة">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="tasbih.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <!-- Header -->
+        <header class="card-header">
+            <div class="decorative-line"></div>
+            <h1 class="title">صدقة جارية على روح جدتي عثماني رشيدة</h1>
+            <p class="subtitle">كل ضغطة استغفار نور في قبرها يا رب</p>
+            <div class="decorative-line"></div>
+        </header>
+
+        <!-- Step 1: Selection -->
+        <section id="selection-section" class="selection-section">
+            <p class="section-label">اختر الذكر</p>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="tasbih" value="استغفر الله">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">استغفر الله</span>
+                    <span class="radio-badge" data-key="استغفر الله">0</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="tasbih" value="سبحان الله">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">سبحان الله</span>
+                    <span class="radio-badge" data-key="سبحان الله">0</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="tasbih" value="الحمد لله">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">الحمد لله</span>
+                    <span class="radio-badge" data-key="الحمد لله">0</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="tasbih" value="لا اله إلا الله">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">لا اله إلا الله</span>
+                    <span class="radio-badge" data-key="لا اله إلا الله">0</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="tasbih" value="الله أكبر">
+                    <span class="radio-custom"></span>
+                    <span class="radio-text">الله أكبر</span>
+                    <span class="radio-badge" data-key="الله أكبر">0</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Step 2: Counter -->
+        <section id="counter-section" class="counter-section hidden">
+            <div class="counter-display">
+                <span id="counter-number" class="counter-number">0</span>
+            </div>
+            <button id="tasbih-btn" class="tasbih-btn" type="button">
+                <span id="btn-text" class="btn-text">سبحان الله</span>
+            </button>
+        </section>
+
+        <!-- Step 3: Controls -->
+        <footer id="footer-section" class="footer-section hidden">
+            <div class="controls-row">
+                <button id="reset-current-btn" class="control-btn reset-current" type="button">
+                    <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                        <path d="M3 3v5h5"></path>
+                    </svg>
+                    تصفير الحالي
+                </button>
+                <button id="reset-all-btn" class="control-btn reset-all" type="button">
+                    <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    تصفير الكل
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>تأكيد الحذف</h3>
+            </div>
+            <div class="modal-body">
+                <p>هل أنت متأكد من تصفير جميع العدادات؟</p>
+                <p class="modal-warning">لا يمكن التراجع عن هذا الإجراء.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancel-modal-btn" class="modal-btn cancel">إلغاء</button>
+                <button id="confirm-modal-btn" class="modal-btn confirm">نعم، تصفير الكل</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tasbih.js"></script>
+</body>
+
+</html>
